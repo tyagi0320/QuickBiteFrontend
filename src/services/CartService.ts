@@ -59,17 +59,17 @@ export const CartService = {
     return res.data;
   },
 
-  async getCartItems() {
-    const token = TokenService.getAccessToken();
+async getCartItems() {
+  const token = TokenService.getAccessToken();
 
-    const res = await axios.get(`${BASE_URL}/cart/`, {
-      headers: {
-        Authorization: `Bearer ${token}`
-      }
-    });
+  console.log("TOKEN IN CART SERVICE:", token);  // 👈 ADD THIS
 
-    return res.data;
-  },
+  const res = await axios.get(`${BASE_URL}/cart/`, { 
+    headers: { Authorization: `Bearer ${token}` }
+  });
+
+  return res.data;
+}
 
   async updateCart(cart_id: number, quantity: number) {
     const token = TokenService.getAccessToken();
