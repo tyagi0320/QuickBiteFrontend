@@ -39,8 +39,6 @@ export default function Dashboard() {
   const [editData, setEditData] = useState<Food | null>(null);
   const [selectedFile, setSelectedFile] = useState<File | null>(null);
 
-  const API_BASE ;
-
   // Calculate Stats
   const pendingCount = orders.filter(o => o.status === 'pending').length;
   const approvedCount = orders.filter(o => o.status === 'approved').length;
