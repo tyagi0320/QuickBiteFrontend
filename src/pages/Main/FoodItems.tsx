@@ -10,7 +10,6 @@ import { TokenService } from '../../services/TokenService';
 import { FoodService } from '../../services/FoodService';
 
 export default function FoodItems({ foodData }: any) {
-  const API_URL = "http://127.0.0.1:8000"; // Updated to use the correct local IP
   const { addToCart } = useCart();
   
   // Decode the token to check the user's role
