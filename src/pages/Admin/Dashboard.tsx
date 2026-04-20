@@ -39,7 +39,7 @@ export default function Dashboard() {
   const [editData, setEditData] = useState<Food | null>(null);
   const [selectedFile, setSelectedFile] = useState<File | null>(null);
 
-  const API_BASE = "http://127.0.0.1:8000";
+  const API_BASE ;
 
   // Calculate Stats
   const pendingCount = orders.filter(o => o.status === 'pending').length;
@@ -141,7 +141,7 @@ export default function Dashboard() {
                 <StyledTableCell>{index + 1}</StyledTableCell>
                 <StyledTableCell>
                   <img 
-                    src={`${API_BASE}/images/${food.image}`} 
+                    src={FoodService.getImageUrl(food.image)} 
                     alt={food.name} 
                     style={{ width: '50px', height: '50px', borderRadius: '8px', objectFit: 'cover' }} 
                   />
