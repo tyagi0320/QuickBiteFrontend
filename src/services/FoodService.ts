@@ -5,7 +5,13 @@ const BASE_URL = import.meta.env.VITE_BASE_URL;
 const API_URL = `${BASE_URL}/foods`;
 
 export const FoodService = {
-  getImageUrl(imageName: string): string {
+    getImageUrl(imageName: string): string {
+    // 1. If there's no image data, return an empty string
+    if (!imageName) return '';
+    if (imageName.startsWith('http')) {
+      return imageName;
+    }
+    const BASE_URL = import.meta.env.VITE_BASE_URL;
     return `${BASE_URL}/images/${imageName}`;
   },
 
