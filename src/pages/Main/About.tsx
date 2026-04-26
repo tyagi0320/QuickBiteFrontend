@@ -24,19 +24,18 @@ const About = () => {
   return (
     <Container maxWidth="lg" sx={{ py: 8 }}>
       <Box sx={{ textAlign: 'center', mb: 8 }}>
-        <Typography variant="overline" color="primary" sx={{ fontWeight: 'bold' }}>About MyApp</Typography>
         <Typography variant="h2" component="h1" sx={{ fontWeight: 800, mt: 1 }} gutterBottom>
           Redefining Your Shopping Experience
         </Typography>
         <Typography variant="h6" color="text.secondary" sx={{ maxWidth: 800, mx: 'auto' }}>
-          Launched in 2024, MyApp makes premium products accessible everywhere.
+          Launched in 2026, QuickBite give you premium food experience.
         </Typography>
       </Box>
 
       {/* 2. Visual Section */}
       <Box sx={{ width: '100%', height: 400, bgcolor: 'grey.200', borderRadius: 4, display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', mb: 8 }}>
         <StorefrontIcon sx={{ fontSize: 100, color: 'grey.400' }} />
-        <Typography variant="h4" sx={{ color: 'grey.400', mt: 2 }}>Warehouse Photo</Typography>
+        <Typography variant="h4" sx={{ color: 'grey.400', mt: 2 }}>Restaurant Photo</Typography>
       </Box>
 
       <Typography variant="h4" sx={{ textAlign: 'center', fontWeight: 'bold', mb: 4 }}>Why Choose Us?</Typography>
